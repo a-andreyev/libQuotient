@@ -22,6 +22,24 @@ BuildRequires: pkgconfig(Qt5Multimedia)
 BuildRequires: cmake >= 3.1
 BuildRequires: opt-gcc6
 
+%description
+%{summary}.
+
+%package devel
+Summary:    Development files for Matrix Qt library
+Group:      Development/Libraries
+Requires:   %{name} = %{version}-%{release}
+Requires:   qt5-qtmultimedia-devel
+
+Requires: qt5-qtmultimedia-plugin-mediaservice-gstcamerabin
+Requires: qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
+Requires: qt5-qtmultimedia-plugin-audio-alsa
+Requires: qt5-qtmultimedia-plugin-mediaservice-gstaudiodecoder
+Requires: qt5-qtmultimedia-plugin-mediaservice-gstmediaplayer
+Requires: qt5-qtmultimedia-plugin-playlistformats-m3u
+Requires: qt5-qtmultimedia-plugin-audio-pulseaudio
+Requires: qt5-qtmultimedia-plugin-resourcepolicy-resourceqt
+
 BuildRequires: qt5-qtmultimedia-plugin-mediaservice-gstcamerabin
 BuildRequires: qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
 BuildRequires: qt5-qtmultimedia-plugin-audio-alsa
@@ -31,14 +49,6 @@ BuildRequires: qt5-qtmultimedia-plugin-playlistformats-m3u
 BuildRequires: qt5-qtmultimedia-plugin-audio-pulseaudio
 BuildRequires: qt5-qtmultimedia-plugin-resourcepolicy-resourceqt
 
-%description
-%{summary}.
-
-%package devel
-Summary:    Development files for Matrix Qt library
-Group:      Development/Libraries
-Requires:   %{name} = %{version}-%{release}
-Requires:   qt5-qtmultimedia-devel
 %description devel
 %{summary}.
 
